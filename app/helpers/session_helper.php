@@ -21,3 +21,13 @@ function flash(
       unset($_SESSION[$name . '_class']);
    }
 }
+
+function isLoggedIn()
+{
+   if (isset($_SESSION['user_id'])) {
+      return true;
+   }
+   else {
+      return false;
+   }
+}
